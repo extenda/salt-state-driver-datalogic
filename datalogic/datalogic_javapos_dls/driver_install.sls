@@ -1,7 +1,8 @@
 datalogic-environment:
-   file.managed:
-     - name: /etc/profile.d/datalogic.sh
-     - source: salt://{{ slspath }}/files/environment.sh
+  file.managed:
+    - name: /etc/profile.d/datalogic.sh
+    - source: salt://{{ slspath }}/files/environment.sh
+    - mode: 755
 
 /tmp/setup.jar:
   file.managed:
